@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ROHIT BHAI - Official Community</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1077388191707000');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1077388191707000&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #050507;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 85% 90%, rgba(184, 134, 11, 0.14) 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(255, 215, 0, 0.1) 0%, transparent 45%);
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Floating Golden Particles */
+        .gold-particles {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .particle {
+            position: absolute;
+            bottom: -20px;
+            background: radial-gradient(circle, #fff3b0 0%, #d4af37 60%, transparent 100%);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp linear infinite;
+        }
+        .particle:nth-child(1) { width: 4px; height: 4px; left: 10%; animation-duration: 7s; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 6px; height: 6px; left: 26%; animation-duration: 9s; animation-delay: 1.5s; }
+        .particle:nth-child(3) { width: 3px; height: 3px; left: 44%; animation-duration: 6.5s; animation-delay: 3s; }
+        .particle:nth-child(4) { width: 5px; height: 5px; left: 62%; animation-duration: 8.5s; animation-delay: 0.8s; }
+        .particle:nth-child(5) { width: 4px; height: 4px; left: 78%; animation-duration: 7.5s; animation-delay: 2.2s; }
+        .particle:nth-child(6) { width: 6px; height: 6px; left: 91%; animation-duration: 10s; animation-delay: 4s; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(0.6); opacity: 0; }
+            25% { opacity: 0.9; }
+            75% { opacity: 0.65; }
+            100% { transform: translateY(-105vh) scale(1.25); opacity: 0; }
+        }
+
+        /* Animated Liquid-Gold Border Wrapper */
+        .card-border-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 395px;
+            border-radius: 28px;
+            padding: 2px;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: 
+                0 28px 65px rgba(0, 0, 0, 0.9),
+                0 0 40px rgba(212, 175, 55, 0.22);
+            animation: cardEntrance 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .card-border-wrap::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent 0deg,
+                transparent 65deg,
+                #aa771c 105deg,
+                #fcf6ba 140deg,
+                #d4af37 175deg,
+                transparent 215deg,
+                transparent 255deg,
+                #bf953f 295deg,
+                #fff3b0 330deg,
+                transparent 360deg
+            );
+            animation: spinBorder 4.5s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes spinBorder {
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes cardEntrance {
+            0% { opacity: 0; transform: translateY(28px) scale(0.95); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Main Luxury Velvet-Dark Card */
+        .gateway-card {
+            background: linear-gradient(165deg, #151319 0%, #0a090c 58%, #121016 100%);
+            width: 100%;
+            border-radius: 26px;
+            padding: 28px 22px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top Gold Crown Hairline Reflection */
+        .gateway-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 14%;
+            right: 14%;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, rgba(255, 243, 176, 0.9), transparent);
+        }
+
+        /* VIP Urgency Badge */
+        .urgency-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(170, 119, 28, 0.08));
+            border: 1px solid rgba(252, 246, 186, 0.38);
+            color: #fae392;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 22px;
+            letter-spacing: 1.1px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(212, 175, 55, 0.14);
+        }
+
+        .urgency-badge::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: skewX(-25deg);
+            animation: badgeSweep 3s infinite;
+        }
+
+        @keyframes badgeSweep {
+            0%, 55% { left: -100%; }
+            100% { left: 180%; }
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #22c55e, 0 0 18px #22c55e;
+            animation: pulseGreen 1.4s infinite;
+        }
+
+        @keyframes pulseGreen {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.25); opacity: 0.55; }
+        }
+
+        /* Profile Logo with Double Rotating Golden Halo */
+        .profile-wrap {
+            position: relative;
+            width: 118px;
+            height: 118px;
+            margin: 0 auto 18px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .halo-outer {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 1.5px dashed rgba(252, 246, 186, 0.6);
+            animation: spinHalo 12s linear infinite;
+        }
+
+        .halo-inner {
+            position: absolute;
+            inset: 5px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c, #bf953f);
+            animation: spinHaloReverse 4.5s linear infinite;
+            box-shadow: 0 0 28px rgba(212, 175, 55, 0.5);
+        }
+
+        @keyframes spinHalo {
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes spinHaloReverse {
+            100% { transform: rotate(-360deg); }
+        }
+
+        .profile-img {
+            position: relative;
+            width: 102px;
+            height: 102px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0b0a0e;
+            z-index: 2;
+            display: block;
+            background-color: #16141c;
+        }
+
+        /* Brand Header & Shimmering Gold Title */
+        .brand-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', 'Plus Jakarta Sans', sans-serif;
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(
+                90deg,
+                #d4af37 0%,
+                #fff3b0 25%,
+                #ffffff 50%,
+                #f5d061 75%,
+                #d4af37 100%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldTextShine 3.2s linear infinite;
+        }
+
+        @keyframes goldTextShine {
+            to { background-position: 200% center; }
+        }
+
+        .tg-verified-badge {
+            width: 22px;
+            height: 22px;
+            fill: #ffd700;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+            flex-shrink: 0;
+        }
+
+        /* Online Stats Pill */
+        .sub-stats {
+            display: inline-block;
+            font-size: 12.5px;
+            color: #4ade80;
+            font-weight: 700;
+            margin-bottom: 14px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.28);
+            padding: 4px 13px;
+            border-radius: 20px;
+            letter-spacing: 0.2px;
+        }
+
+        p.desc {
+            font-size: 13.5px;
+            color: #bab6c4;
+            line-height: 1.55;
+            margin-bottom: 24px;
+            padding: 0 4px;
+        }
+
+        /* Royal Liquid-Gold Action Button */
+        .action-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 35%, #d4af37 65%, #fbf5b7 85%, #aa771c 100%);
+            background-size: 200% 200%;
+            color: #0d0b08;
+            padding: 17px 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 250, 220, 0.85);
+            cursor: pointer;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 
+                0 10px 26px rgba(212, 175, 55, 0.38),
+                inset 0 1px 1px rgba(255, 255, 255, 0.85);
+            animation: goldBtnPulse 1.8s infinite, goldGradientShift 4s ease infinite;
+            transition: transform 0.15s ease;
+        }
+
+        /* Diagonal Glass Glare Sweep */
+        .action-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.8),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: btnShimmer 2.5s infinite;
+        }
+
+        @keyframes btnShimmer {
+            0%, 45% { left: -120%; }
+            100% { left: 160%; }
+        }
+
+        @keyframes goldGradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes goldBtnPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(245, 208, 97, 0.72), 0 10px 26px rgba(212, 175, 55, 0.38);
+            }
+            70% {
+                transform: scale(1.025);
+                box-shadow: 0 0 0 14px rgba(245, 208, 97, 0), 0 14px 32px rgba(212, 175, 55, 0.55);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(245, 208, 97, 0), 0 10px 26px rgba(212, 175, 55, 0.38);
+            }
+        }
+
+        .action-btn:active {
+            transform: scale(0.97) !important;
+        }
+
+        .btn-arrow {
+            display: inline-block;
+            font-size: 18px;
+            animation: arrowSlide 1.2s ease-in-out infinite;
+        }
+
+        @keyframes arrowSlide {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(5px); }
+        }
+
+        /* Countdown Box */
+        .timer-text {
+            font-size: 12px;
+            color: #a49fae;
+            margin-top: 14px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.18);
+            padding: 7px 14px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .timer-text strong {
+            color: #ffd700;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.45);
+        }
+
+        /* Agency Credit Link */
+        .sub-link {
+            margin-top: 18px;
+            font-size: 13.5px;
+            color: #8c8796;
+            font-weight: 500;
+        }
+
+        .sub-link a {
+            color: #f5d061;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 1px dashed rgba(245, 208, 97, 0.5);
+            padding-bottom: 1px;
+            transition: color 0.2s ease;
+        }
+
+        .sub-link a:hover {
+            color: #fff3b0;
+        }
+
+        /* Meta Compliance Footer */
+        .footer-terms {
+            margin-top: 20px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(212, 175, 55, 0.18);
+            font-size: 10.5px;
+            color: #767282;
+            line-height: 1.5;
+            text-align: center;
+        }
+        .footer-terms strong {
+            color: #9e98ac;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Gold Sparkles -->
+    <div class="gold-particles">
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+        <span class="particle"></span>
+    </div>
+
+    <div class="card-border-wrap">
+        <div class="gateway-card">
+            
+            <div class="urgency-badge">
+                <span class="live-dot"></span>
+                <span>PRIVATE ACCESS OPEN</span>
+            </div>
+
+            <div class="profile-wrap">
+                <div class="halo-outer"></div>
+                <div class="halo-inner"></div>
+                <img src="https://i.ibb.co/8nNSMcKZ/tg-img-EOk-LNx.jpg" class="profile-img" alt="ROHIT BHAI">
+            </div>
+
+            <div class="brand-header">
+                <h1>ROHIT BHAI</h1>
+                <svg class="tg-verified-badge" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.2 14.2l-3.5-3.5 1.41-1.41 2.09 2.08 5.69-5.69 1.41 1.41-7.1 7.11z"/>
+                </svg>
+            </div>
+
+            <div class="sub-stats">● 1,480 Members Online Now</div>
+            <p class="desc">Official community for daily market research, verified insights, and live analysis.</p>
+
+            <!-- Tap Button (Direct Link + Backend Tracked Link Support) -->
+            <a href="https://t.me/+k2M26NqccE4xYTA1" id="joinBtn" class="action-btn">
+                <span>Join ROHIT BHAI</span>
+                <span class="btn-arrow">➔</span>
+            </a>
+
+            <div>
+                <p class="timer-text">Invite access expires in: <strong id="timer">04:59</strong></p>
+            </div>
+
+            <div class="sub-link">
+                JOIN FAST <a href="https://t.me/+k2M26NqccE4xYTA1" 
+                   onclick="window.location.href='tg://resolve?domain=+k2M26NqccE4xYTA1'; setTimeout(function(){ window.location.href='https://t.me/+k2M26NqccE4xYTA1'; }, 500); return false;">
+                   ROHIT BHAI
+                </a>
+            </div>
+
+            <div class="footer-terms">
+                <strong>Disclaimer:</strong> This community is strictly for educational, informational, and general discussion purposes only. We do not guarantee any financial profits or returns. Please conduct your own research before making any decisions. This page is not affiliated with, endorsed, or sponsored by Meta Platforms, Inc. or Telegram.
+            </div>
+        </div>
+    </div>
+
+    <!-- Backend Link Fetch & Standard Web Redirect Logic -->
+    <script>
+    (function() {
+        var defaultChannelLink = "https://t.me/+k2M26NqccE4xYTA1";
+        var cachedLink = defaultChannelLink;
+        var btn = document.getElementById('joinBtn');
+        var adminBtn = document.getElementById('adminBtn');
+
+        // URL se fbclid nikaalo taaki backend match kar sake
+        var urlParams = new URLSearchParams(window.location.search);
+        var fbclid = urlParams.get('fbclid') || '';
+
+        // 1. generate_link.php ko call karke unique tracked invite link lo (agar available ho)
+        fetch('generate_link.php?fbclid=' + encodeURIComponent(fbclid))
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data.status === 'success' && data.link) {
+                    cachedLink = data.link;
+                    if (btn) btn.href = cachedLink;
+                    if (adminBtn) adminBtn.href = cachedLink;
+                }
+            })
+            .catch(function(err) {
+                console.log("Using default channel link:", err);
+            });
+
+        // 2. Click hone par STANDARD LINK khulega (No Deep Link)
+        function handleRedirect(e) {
+            if (cachedLink) {
+                e.preventDefault();
+                // Standard Web Link (Telegram browser/app me normal tarike se khulega)
+                window.location.href = cachedLink;
+            }
+        }
+
+        if (btn) btn.addEventListener('click', handleRedirect);
+        if (adminBtn) adminBtn.addEventListener('click', handleRedirect);
+
+        // 3. 5-Minute Urgency Timer
+        var timeLeft = 299;
+        var timerDisplay = document.getElementById('timer');
+        setInterval(function() {
+            if (timeLeft <= 0) timeLeft = 299;
+            var mins = Math.floor(timeLeft / 60);
+            var secs = timeLeft % 60;
+            timerDisplay.textContent = (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+            timeLeft--;
+        }, 1000);
+    })();
+    </script>
+
+</body>
+</html>
